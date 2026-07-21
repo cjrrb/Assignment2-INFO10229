@@ -8,14 +8,32 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var useTieredPricing: Bool = false
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("Electricity Billing System")
+                        .font(Font.default.bold())
+            
+            
+                
+            Form{
+                Section{
+                    Toggle("Tiered Pricing?", isOn: $useTieredPricing)
+                }
+                
+                Section{
+                    if useTieredPricing {
+                        TieredPricingView()
+                    } else {
+                        TOUPricingView()
+                    }
+                }
+                
+            }
         }
-        .padding()
+        .padding(5)
+        
     }
 }
 
