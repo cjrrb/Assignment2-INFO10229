@@ -2,7 +2,7 @@
 //  TOUPricingView.swift
 //  A3CortReynoldsBolan
 //
-//  Created by Cort Reynolds-Bolan on 2026-07-21.
+//  Created by Cort Reynolds-Bolan (991697602) on 2026-07-21.
 //
 
 import SwiftUI
@@ -49,7 +49,7 @@ struct TOUPricingView: View {
     }
     
     var body: some View {
-        Form{
+        List{
             Section("USAGE DETAILS"){
                 TextField("On-Peak Usage", value: $onPeakUsage, format: .number)
                     .keyboardType(.decimalPad)

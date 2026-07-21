@@ -2,7 +2,7 @@
 //  A3CortReynoldsBolanApp.swift
 //  A3CortReynoldsBolan
 //
-//  Created by Cort Reynolds-Bolan on 2026-07-21.
+//  Created by Cort Reynolds-Bolan (991697602) on 2026-07-21.
 //
 
 import SwiftUI

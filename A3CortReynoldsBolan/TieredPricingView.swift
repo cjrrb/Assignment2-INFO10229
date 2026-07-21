@@ -2,7 +2,7 @@
 //  TieredPricingView.swift
 //  A3CortReynoldsBolan
 //
-//  Created by Cort Reynolds-Bolan on 2026-07-21.
+//  Created by Cort Reynolds-Bolan (991697602) on 2026-07-21.
 //
 
 import SwiftUI
@@ -51,7 +51,7 @@ struct TieredPricingView: View {
     }
     
     var body: some View {
-        Form{
+        List{
             Section("USAGE DETAILS"){
                 TextField("Total Usage", value: $totalUsage, format: .number)
                     .keyboardType(.decimalPad)
