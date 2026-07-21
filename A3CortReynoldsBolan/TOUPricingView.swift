@@ -61,26 +61,26 @@ struct TOUPricingView: View {
             
             Section("CONSUMPTION CHARGES"){
                 HStack{
-                    Text("On-peak charges:")
+                    Text("On-Peak Charges:")
                     Spacer()
                     Text("$\(onPeakCharges, specifier: "%.2f")")
                 }
                 HStack{
-                    Text("Of-peak charges:")
+                    Text("Off-Peak Charges:")
                     Spacer()
                     Text("$\(offPeakCharges, specifier: "%.2f")")
                 }
                 HStack{
-                    Text("Mid-peak charges:")
+                    Text("Mid-Peak Charges:")
                     Spacer()
                     Text("$\(midPeakCharges, specifier: "%.2f")")
                 }
                 
                 HStack{
-                    Text("Total consumption charges:")
+                    Text("Total Consumption Charges:")
                     Spacer()
                     Text("$\(totalConsumptionCharges, specifier: "%.2f")")
-                }.foregroundStyle(Color.blue)
+                }.foregroundStyle(.blue)
             }
             
             Section("REGULATORY CHARGES"){
@@ -95,11 +95,11 @@ struct TOUPricingView: View {
                     Text("$\(hstCharge, specifier: "%.2f")")
                 }
                 HStack{
-                    Text("Total regulatory charges:")
+                    Text("Total Regulatory Gharges:")
                     Spacer()
                     Text("$\(totalRegulatoryCharges, specifier: "%.2f")")
                 }
-                .foregroundStyle(Color.blue)
+                .foregroundStyle(.blue)
             }
             
             Section("BILL AMOUNT"){
@@ -108,7 +108,7 @@ struct TOUPricingView: View {
                     Spacer()
                     Text("$\(netBillAmount, specifier: "%.2f")")
                 }
-                .foregroundStyle(Color.red)
+                .foregroundStyle(.red)
             }
         }
     }

@@ -12,23 +12,25 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Text("Electricity Billing System")
-                        .font(Font.default.bold())
+            Text("Electricity Billing System").font(Font.default.bold())
                         
             Form{
                 Section{
                     Toggle("Tiered Pricing?", isOn: $useTieredPricing)
                 }
-            }
-            if useTieredPricing {
-                TieredPricingView()
-            } else {
-                TOUPricingView()
+                
+                    
             }
             
-        }
-        .padding(5)
+            if useTieredPricing {
+                TieredPricingView()
+                
+            } else {
+                TOUPricingView()
+                
+            }
         
+        }
     }
 }
 
