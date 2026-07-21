@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TieredPricingView: View {
     //Total usage entered by user
-    @State var totalUsage: Double = 0
+    @State private var totalUsage: Double!
     
     //Computed Consumption Charges
     var tier1Charges: Double {
@@ -33,16 +33,16 @@ struct TieredPricingView: View {
     }
     
     //Computed Regulatory Charges
-    var provicialRebate: Double {
+    var provincialRebate: Double {
         totalConsumptionCharges * 0.131
     }
     
     var hstCharge: Double {
-        totalConsumptionCharges * 0.13 - provicialRebate
+        return (totalConsumptionCharges - provincialRebate) * 0.13
     }
     
     var totalRegulatoryCharges: Double {
-        hstCharge - provicialRebate
+        hstCharge - provincialRebate
     }
     
     //Net bill amount
@@ -53,7 +53,8 @@ struct TieredPricingView: View {
     var body: some View {
         Form{
             Section("USAGE DETAILS"){
-                
+                TextField("Total Usage", value: $totalUsage, format: .number)
+                    .keyboardType(.decimalPad)
             }
             
             Section("CONSUMPTION CHARGES"){
